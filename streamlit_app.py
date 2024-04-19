@@ -76,6 +76,7 @@ def main():
         st.markdown(':green[Response:]')
         st.write(response.response)
 
+        st.markdown(':green[Sources used:]')
         sources = response.source_nodes
 
         for source in sources:
