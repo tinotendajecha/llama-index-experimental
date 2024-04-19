@@ -21,7 +21,7 @@ import getpass
 
 from llama_index.core import SimpleDirectoryReader
 
-from llama_index.postprocessor.flag_embedding_reranker import FlagEmbeddingReranker
+# from llama_index.postprocessor.flag_embedding_reranker import FlagEmbeddingReranker
 import time
 
 
@@ -56,14 +56,14 @@ def main():
 
     if user_question:
 
-        reranker = FlagEmbeddingReranker(
-        top_n=3,
-        model="BAAI/bge-reranker-large",
-        )
+        # reranker = FlagEmbeddingReranker(
+        # top_n=3,
+        # model="BAAI/bge-reranker-large",
+        # )
 
         query_engine = index.as_query_engine(
             similarity_top_k = 5,
-            node_postprocessors=[reranker],
+            # node_postprocessors=[reranker],
             verbose=True,
         )
 
